@@ -9,7 +9,7 @@ from app.core.security import create_access_token, create_refresh_token, decode_
 router = APIRouter(prefix="/auth", tags=["auth"])
 
 
-@router.post("/login", response_model=TokenResponse, summary="Authenticate and obtain tokens")
+@router.post("/token", response_model=TokenResponse, summary="Authenticate and obtain tokens")
 def login(request: LoginRequest):
     """
     Authenticate with **username** and **password**.

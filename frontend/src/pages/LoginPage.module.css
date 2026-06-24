@@ -1,0 +1,196 @@
+/* LoginPage.module.css — Dark theme, Apple design system */
+
+/* Full-screen centered layout */
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface-black);
+  padding: var(--space-lg);
+}
+
+/* Card */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-surface-tile-1);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-xxl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Brand row */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.231px;
+  color: var(--color-on-dark);
+}
+
+/* Headings */
+.title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.14;
+  letter-spacing: -0.28px;
+  color: var(--color-on-dark);
+  text-align: center;
+}
+
+.subtitle {
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-body-muted);
+  text-align: center;
+  letter-spacing: -0.224px;
+  margin-top: calc(-1 * var(--space-xs));
+}
+
+/* Form */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-top: var(--space-xs);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.224px;
+  color: var(--color-on-dark);
+}
+
+.input {
+  width: 100%;
+  padding: 12px var(--space-md);
+  background-color: var(--color-surface-tile-2);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--rounded-md);
+  color: var(--color-on-dark);
+  font-family: var(--font-text);
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.374px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+  color: var(--color-ink-muted-48);
+}
+
+.input:focus {
+  border-color: var(--color-primary-on-dark);
+  box-shadow: 0 0 0 3px rgba(41, 151, 255, 0.2);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Error banner */
+.error {
+  background-color: rgba(255, 59, 48, 0.15);
+  border: 1px solid rgba(255, 59, 48, 0.4);
+  border-radius: var(--rounded-sm);
+  color: #ff6b6b;
+  font-size: 14px;
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+}
+
+/* Primary button */
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  width: 100%;
+  padding: 14px var(--space-xl);
+  background-color: var(--color-primary-on-dark);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--rounded-pill);
+  font-family: var(--font-text);
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+  margin-top: var(--space-xs);
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background-color: #4da6ff;
+}
+
+.btnPrimary:active:not(:disabled) {
+  background-color: var(--color-primary);
+}
+
+.btnPrimary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Hint */
+.hint {
+  font-size: 13px;
+  color: var(--color-ink-muted-48);
+  text-align: center;
+  margin-top: var(--space-xs);
+}
+
+.hint code {
+  font-family: "SF Mono", ui-monospace, monospace;
+  background-color: var(--color-surface-tile-2);
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: var(--color-primary-on-dark);
+  font-size: 12px;
+}
